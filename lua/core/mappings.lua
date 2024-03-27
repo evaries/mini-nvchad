@@ -13,6 +13,9 @@ M.general = {
     ["<C-l>"] = { "<Right>", "Move right" },
     ["<C-j>"] = { "<Down>", "Move down" },
     ["<C-k>"] = { "<Up>", "Move up" },
+
+     -- save
+    ["<C-s>"] = { "<cmd> w <CR>", "Save file" },
   },
 
   n = {
@@ -251,6 +254,18 @@ M.lspconfig = {
       "LSP code action",
     },
   },
+}
+
+M.copilot = {
+  i = {
+    ["<C-o>"] = {
+      function()
+        vim.fn.feedkeys(vim.fn['copilot#Accept'](), '')
+      end,
+      "Copilot Accept",
+       {replace_keycodes = true, nowait=true, silent=true, expr=true, noremap=true}
+      }
+  }
 }
 
 M.nvimtree = {
