@@ -16,6 +16,7 @@ M.general = {
 
      -- save
     ["<C-s>"] = { "<cmd> w <CR>", "Save file" },
+    ["<M-s>"] = { "<cmd> w <CR>", "Save file" },
   },
 
   n = {
@@ -26,8 +27,11 @@ M.general = {
     ["<C-j>"] = { "<C-w>j", "Window down" },
     ["<C-k>"] = { "<C-w>k", "Window up" },
 
+    ["<leader>y"] = { [["+y]] },
+
     -- save
     ["<C-s>"] = { "<cmd> w <CR>", "Save file" },
+    ["<M-s>"] = { "<cmd> w <CR>", "Save file" },
 
     -- Copy all
     ["<C-c>"] = { "<cmd> %y+ <CR>", "Copy whole file" },

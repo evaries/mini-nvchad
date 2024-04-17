@@ -3,7 +3,11 @@ local null_ls = require("null-ls")
 
 local opts = {
   sources = {
+    -- null_ls.builtins.diagnostics.eslint,
     null_ls.builtins.formatting.prettierd,
+    null_ls.builtins.formatting.prettierd.with({
+      extra_filetypes = { "astro" },
+    }),
   },
   on_attach = function(client, bufnr)
     if client.supports_method("textDocument/formatting") then
